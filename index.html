@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusFlow — Personal Productivity</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <p class="eyebrow">CYCLE 1 · PERSONAL PRODUCT</p>
+        <h1>FocusFlow</h1>
+        <p class="subtitle">A simple dashboard to plan your day, track priorities, and stay focused.</p>
+      </div>
+      <div class="date" id="date"></div>
+    </header>
+
+    <section class="stats">
+      <div class="stat"><span id="total">0</span><small>Total tasks</small></div>
+      <div class="stat"><span id="done">0</span><small>Completed</small></div>
+      <div class="stat"><span id="progress">0%</span><small>Progress</small></div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <div class="card-head">
+          <h2>Today's Tasks</h2>
+          <button id="clearDone" class="ghost">Clear completed</button>
+        </div>
+        <form id="taskForm">
+          <input id="taskInput" type="text" placeholder="Add a task..." maxlength="80" required>
+          <button class="primary" type="submit">Add</button>
+        </form>
+        <ul id="taskList"></ul>
+      </div>
+
+      <aside class="card focus">
+        <p class="eyebrow">FOCUS NOTE</p>
+        <h2>What matters most today?</h2>
+        <textarea id="note" placeholder="Write a short note or goal..."></textarea>
+        <button id="saveNote" class="primary full">Save note</button>
+        <p id="saved" class="saved"></p>
+      </aside>
+    </section>
+
+    <footer>Built as a Cycle 1 Personal Product using AI-assisted / vibe coding.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
